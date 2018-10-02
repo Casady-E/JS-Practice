@@ -66,6 +66,12 @@ const hazard = {
     let accuracy = (onTarget / shots) * 100;
     console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
   },
+  goalsAverage: function calculateAverage(goals, appearances){
+    goals = this.totalGoals;
+    appearances = this.totalAppearances;
+    let average = (goals / appearances);
+    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
+  }
 };
 
 const griezmann = {
@@ -84,6 +90,12 @@ const griezmann = {
     let accuracy = (onTarget / shots) * 100;
     console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
   },
+  goalsAverage: function calculateAverage(goals, appearances){
+    goals = this.totalGoals;
+    appearances = this.totalAppearances;
+    let average = (goals / appearances);
+    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
+  }
 }
 
 const messi = {
@@ -102,8 +114,17 @@ const messi = {
     let accuracy = (onTarget / shots) * 100;
     console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
   },
+  goalsAverage: function calculateAverage(goals, appearances){
+    goals = this.totalGoals;
+    appearances = this.totalAppearances;
+    let average = (goals / appearances);
+    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
+  }
 }
 
 hazard.shotAccuracy();
+hazard.goalsAverage();
 griezmann.shotAccuracy();
+griezmann.goalsAverage();
 messi.shotAccuracy();
+messi.goalsAverage();
