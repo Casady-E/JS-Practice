@@ -48,7 +48,7 @@ function userInfo(name, age, username) {
 userInfo(prompt("What is your name?"), prompt("How old are you?"), prompt("What is your username?"));
 */
 
-
+console.log("All statistics were collected during October 2018");
 
 const hazard = {
   name: "Eden Hazard",
@@ -63,11 +63,10 @@ const hazard = {
   shotAccuracy: function calculateAccuracy(shots, onTarget){
     shots = this.totalShots;
     onTarget = this.shotsOnTarget;
-    let accuracy = onTarget / shots;
-    console.log(accuracy.toFixed(2));
+    let accuracy = (onTarget / shots) * 100;
+    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
   },
 };
-hazard.shotAccuracy();
 
 const griezmann = {
   name: "Antoine Griezmann",
@@ -82,8 +81,29 @@ const griezmann = {
   shotAccuracy: function calculateAccuracy(shots, onTarget){
     shots = this.totalShots;
     onTarget = this.shotsOnTarget;
-    let accuracy = onTarget / shots;
-    console.log(accuracy.toFixed(2));
+    let accuracy = (onTarget / shots) * 100;
+    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
   },
 }
+
+const messi = {
+  name: "Lionel Messi",
+  position: "Forward",
+  teams: ["Barcelona", "Argentina National"],
+  totalAppearances: 425,
+  totalShots: 2102,
+  shotsOnTarget: 1006,
+  totalGoals: 425,
+  totalPasses: 24022,
+  totalAssists: 151,
+  shotAccuracy: function calculateAccuracy(shots, onTarget){
+    shots = this.totalShots;
+    onTarget = this.shotsOnTarget;
+    let accuracy = (onTarget / shots) * 100;
+    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
+  },
+}
+
+hazard.shotAccuracy();
 griezmann.shotAccuracy();
+messi.shotAccuracy();
