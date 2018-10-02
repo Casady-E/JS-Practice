@@ -1,5 +1,3 @@
-
-
 //codepen console write
 /*
 var c = function() {
@@ -49,12 +47,43 @@ function userInfo(name, age, username) {
 
 userInfo(prompt("What is your name?"), prompt("How old are you?"), prompt("What is your username?"));
 */
-//CHALLENGE 2
 
-/*
 
-Hello, coders! An important part of programming is being able to apply your programs, so your challenge for today is to create a calculator application that has use in your life. It might be an interest calculator, or it might be something that you can use in the classroom. For example, if you were in physics class, you might want to make a F = M * A calc.
 
-EXTRA CREDIT: make the calculator have multiple functions! Not only should it be able to calculate F = M * A, but also A = F/M, and M = F/A!
+const hazard = {
+  name: "Eden Hazard",
+  position: "Forward",
+  teams: ["Chelsea", "Belgium National"],
+  totalAppearances: 215,
+  totalShots: 416,
+  shotsOnTarget: 184,
+  totalGoals: 75,
+  totalPasses: 10207,
+  totalAssists: 41,
+  shotAccuracy: function calculateAccuracy(shots, onTarget){
+    shots = this.totalShots;
+    onTarget = this.shotsOnTarget;
+    let accuracy = onTarget / shots;
+    console.log(accuracy.toFixed(2));
+  },
+};
+hazard.shotAccuracy();
 
-*/
+const griezmann = {
+  name: "Antoine Griezmann",
+  position: "Forward",
+  teams: ["Atletíco Madrid", "Real Sociedad", "France National"],
+  totalAppearances: 367,
+  totalShots: 925,
+  shotsOnTarget: 414,
+  totalGoals: 154,
+  totalPasses: 11257,
+  totalAssists: 49,
+  shotAccuracy: function calculateAccuracy(shots, onTarget){
+    shots = this.totalShots;
+    onTarget = this.shotsOnTarget;
+    let accuracy = onTarget / shots;
+    console.log(accuracy.toFixed(2));
+  },
+}
+griezmann.shotAccuracy();
