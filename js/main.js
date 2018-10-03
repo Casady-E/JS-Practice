@@ -128,3 +128,58 @@ griezmann.shotAccuracy();
 griezmann.goalsAverage();
 messi.shotAccuracy();
 messi.goalsAverage();
+const ronaldo = {
+  name: "Cristiano Ronaldo",
+  position: "Forward",
+  teams: ["Real Madrid", "Juventus", "Portugal National"],
+  totalAppearances: 420,
+  totalShots: 2793,
+  shotsOnTarget: 1154,
+  totalGoals: 428,
+  totalPasses: 13969,
+  totalAssists: 120,
+  shotAccuracy: function calculateAccuracy(shots, onTarget){
+    shots = this.totalShots;
+    onTarget = this.shotsOnTarget;
+    let accuracy = (onTarget / shots) * 100;
+    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
+  },
+  goalsAverage: function calculateAverage(goals, appearances){
+    goals = this.totalGoals;
+    appearances = this.totalAppearances;
+    let average = (goals / appearances);
+    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
+  }
+}
+ronaldo.shotAccuracy();
+ronaldo.goalsAverage();
+console.log(ronaldo);
+
+
+const drogba = {
+  name: "Didier Drogba",
+  position: "Forward",
+  teams: ["Chelsea", "Ivory Coast National", "Galatasaray", "Montreal Impact"],
+  totalAppearances: 198,
+  totalShots: 699,
+  shotsOnTarget: 269,
+  totalGoals: 87,
+  totalPasses: 3772,
+  totalAssists: 37,
+  function (shots, onTarget){
+    shots = this.totalShots;
+    onTarget = this.shotsOnTarget;
+    let accuracy = (onTarget / shots) * 100;
+    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
+  },
+  goalsAverage: function calculateAverage(goals, appearances){
+    goals = this.totalGoals;
+    appearances = this.totalAppearances;
+    let average = (goals / appearances);
+    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
+  }
+}
+
+drogba.shotAccuracy();
+drogba.goalsAverage();
+console.log(drogba);
