@@ -166,20 +166,20 @@ const drogba = {
   totalGoals: 87,
   totalPasses: 3772,
   totalAssists: 37,
-  function (shots, onTarget){
+  shotAccuracy: function (shots, onTarget){
     shots = this.totalShots;
     onTarget = this.shotsOnTarget;
     let accuracy = (onTarget / shots) * 100;
     console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
-  },
-  goalsAverage: function calculateAverage(goals, appearances){
+  }(),
+  goalsAverage: function (goals, appearances){
     goals = this.totalGoals;
     appearances = this.totalAppearances;
     let average = (goals / appearances);
     console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
-  }
+  }()
 }
 
-drogba.shotAccuracy();
-drogba.goalsAverage();
+
+
 console.log(drogba);
