@@ -156,30 +156,40 @@ ronaldo.goalsAverage();
 console.log(ronaldo);
 
 
-const drogba = {
-  name: "Didier Drogba",
-  position: "Forward",
-  teams: ["Chelsea", "Ivory Coast National", "Galatasaray", "Montreal Impact"],
-  totalAppearances: 198,
-  totalShots: 699,
-  shotsOnTarget: 269,
-  totalGoals: 87,
-  totalPasses: 3772,
-  totalAssists: 37,
-  shotAccuracy: function (shots, onTarget){
-    shots = this.totalShots;
-    onTarget = this.shotsOnTarget;
+
+
+function Player(name, position, teams, totalAppearances, totalShots, shotsOnTarget, totalGoals,
+totalPasses, totalAssists, shotAccuracy, goalsAverage) {
+  this.name = name;
+  this.position = position;
+  this.teams = teams;
+  this.totalAppearances = totalAppearances;
+  this.totalShots = totalShots;
+  this.shotsOnTarget = shotsOnTarget;
+  this.totalGoals = totalGoals;
+  this.totalPasses = totalPasses;
+  this.totalAssists = totalAssists;
+  this.shotAccuracy = function (shots, onTarget){
+    shots = totalShots;
+    onTarget = shotsOnTarget;
     let accuracy = (onTarget / shots) * 100;
-    console.log(this.name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
-  }(),
-  goalsAverage: function (goals, appearances){
-    goals = this.totalGoals;
-    appearances = this.totalAppearances;
+    console.log(name + "'s shot accuracy is " + accuracy.toFixed(2) + "%");
+    return accuracy;
+  }();
+  this.goalsAverage = function (goals, appearances){
+    goals = totalGoals;
+    appearances = totalAppearances;
     let average = (goals / appearances);
-    console.log(this.name + " has an average of " + average.toFixed(2) + " goals per game.");
-  }()
+    console.log(name + " has an average of " + average.toFixed(2) + " goals per game.");
+    return average;
+  }();
 }
 
+let drogba = new Player('Didier Drogba', 'Forward', ["Chelsea", "Ivory Coast National", "Galatasaray", "Montreal Impact"],
+ 198, 699, 269, 87, 3772, 37);
 
+ console.log(drogba)
+console.log(drogba.shotAccuracy);
 
-console.log(drogba);
+//console.log(car1.make);
+// expected output: "Eagle"
