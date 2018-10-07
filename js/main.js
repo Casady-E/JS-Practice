@@ -49,7 +49,7 @@ userInfo(prompt("What is your name?"), prompt("How old are you?"), prompt("What 
 */
 
 console.log("All statistics were collected during October 2018");
-
+/*
 const hazard = {
   name: "Eden Hazard",
   position: "Forward",
@@ -154,7 +154,7 @@ const ronaldo = {
 ronaldo.shotAccuracy();
 ronaldo.goalsAverage();
 console.log(ronaldo);
-
+*/
 
 
 
@@ -185,10 +185,23 @@ totalPasses, totalAssists, shotAccuracy, goalsAverage) {
   }();
 }
 
+let hazard = new Player("Eden Hazard", "Forward", ["Chelsea", "Belgium National"],
+215, 416, 184, 75, 10207, 41);
+
+let griezmann = new Player("Antoine Griezmann", "Forward", ["Atletíco Madrid", "Real Sociedad", "France National"],
+367, 925, 414, 154, 11257, 49);
+
+let messi = new Player("Lionel Messi", "Forward", ["Barcelona", "Argentina National"],
+425, 2102, 1006, 425, 24022, 151);
+
+let ronaldo = new Player("Cristiano Ronaldo", "Forward", ["Real Madrid", "Juventus", "Portugal National"],
+420, 2793, 1154, 428, 13969, 120);
+
 let drogba = new Player('Didier Drogba', 'Forward', ["Chelsea", "Ivory Coast National", "Galatasaray", "Montreal Impact"],
  198, 699, 269, 87, 3772, 37);
 
- console.log(drogba)
+
+console.log(hazard, griezmann, messi, ronaldo, drogba);
 console.log(drogba.shotAccuracy);
 
 //console.log(car1.make);
