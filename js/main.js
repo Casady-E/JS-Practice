@@ -200,9 +200,5 @@ let ronaldo = new Player("Cristiano Ronaldo", "Forward", ["Real Madrid", "Juvent
 let drogba = new Player('Didier Drogba', 'Forward', ["Chelsea", "Ivory Coast National", "Galatasaray", "Montreal Impact"],
  198, 699, 269, 87, 3772, 37);
 
-
 console.log(hazard, griezmann, messi, ronaldo, drogba);
 console.log(drogba.shotAccuracy);
-
-//console.log(car1.make);
-// expected output: "Eagle"
